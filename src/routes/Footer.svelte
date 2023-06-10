@@ -1,5 +1,6 @@
 <div class="footer">
 	<a href="/about">About</a>
+  <button>Forest Nation Badge</button>
 </div>
 
 <style>
