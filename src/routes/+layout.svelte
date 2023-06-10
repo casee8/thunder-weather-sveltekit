@@ -1,13 +1,20 @@
 <script>
-	import styles from '../styles.css'
+	import '../styles.css';
 	import Navbar from './Navbar.svelte';
 	import Footer from './Footer.svelte';
+
+	import Geolocation from 'svelte-geolocation';
+
+	let coords = [];
 </script>
 
-<Navbar />
+<div class='overall-container'>
+	<Navbar />
 
-<main>
-	<slot />
-</main>
+	<main>
+		<Geolocation getPosition bind:coords />
+		<slot />
+	</main>
 
-<Footer />
+	<Footer />
+</div>
